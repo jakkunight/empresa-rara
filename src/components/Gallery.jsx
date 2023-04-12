@@ -1,8 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import logo from "../assets/react.svg";
 import GalleryItem from "./GalleryItem.jsx";
 
 const Gallery = () => {
+	const navigate = () => {
+	};
 	return(
 		<div className={
 			"bg-cyan-800 text-white font-5xl p-5 block"
@@ -23,11 +26,15 @@ const Gallery = () => {
 				<GalleryItem item={logo} />
 				<GalleryItem item={logo} />
 				<GalleryItem item={logo} />
-				<button className={
+				<Link to={"/empresa-rara/productos"} className={
 					"rounded-xl bg-blue-900 h-full w-full text-lg"
 				} >
-					Ver más
-				</button>
+					<button className={
+						"rounded-xl bg-blue-900 h-full w-full text-lg"
+					} >
+						Ver más
+					</button>
+				</Link>
 			</div>
 		</div>
 	);
